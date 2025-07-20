@@ -1,0 +1,18 @@
+name: assignment4-env
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - numpy
+  - pandas
+  - matplotlib
+  - seaborn
+  - scipy
+  - statsmodels
+  - jupyterlab
+  - ipython
+  - ipywidgets
+  - pip:
+ - ipywidgets

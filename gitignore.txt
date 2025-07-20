@@ -1,0 +1,28 @@
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment folders (if any local envs are created)
+env/
+venv/
+.conda/
+.venv/
+
+# Conda environment YAML file - you want to keep this, so NOT ignored
+# environment.yml
+
+# pip requirements file - also keep this, so NOT ignored
+# requirements.txt
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Editor config files (optional, but usually safe to ignore)
+.vscode/
+.idea/
+*.swp
