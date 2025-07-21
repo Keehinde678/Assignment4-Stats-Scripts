@@ -1,4 +1,3 @@
-
 # Assignment 4 – Python Statistics Walkthrough
 ### Overview
 This assignment is a guided walkthrough of fundamental statistical techniques and visualization methods using Python. It is based on the Scipy Lectures: Statistics in Python, which covers key packages such as NumPy, SciPy, Pandas, Seaborn, Statsmodels, and Matplotlib. The purpose of this walkthrough is to build practical experience with statistical modeling, data transformation, and data visualization.
