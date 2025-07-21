@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 # Assignment 4 – Python Statistics Walkthrough
 ### Overview
@@ -168,5 +169,7 @@ The tutorial and custom work together provide a comprehensive practice on data c
  Seaborn Documentation
 
  Statsmodels Documentation
+=======
+>>>>>>> 244e6f39375c9f3b4793696cd262f022c92bc389
 
 >>>>>>> be0e7fc9be6e15a929e6337ffcb397fba33ec131
