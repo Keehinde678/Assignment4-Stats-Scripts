@@ -1,166 +1,144 @@
-# Assignment 4 – Python Statistics Walkthrough
-### Overview
-This assignment is a guided walkthrough of fundamental statistical techniques and visualization methods using Python. It is based on the Scipy Lectures: Statistics in Python, which covers key packages such as NumPy, SciPy, Pandas, Seaborn, Statsmodels, and Matplotlib. The purpose of this walkthrough is to build practical experience with statistical modeling, data transformation, and data visualization.
+# Statistics in Python
 
-This repository contains:
+# Overview
+Welcome to this Statistics in Python project!
+Here, we explore foundational and advanced statistical techniques using real-world datasets such as the Iris and Brain Size datasets. This project is designed to guide you through data representation, hypothesis testing, regression modeling, and powerful visualization methods — all within Python’s robust scientific ecosystem.
 
-Jupyter Notebook that follows and extends the online tutorial
+Whether you are a student, researcher, or data enthusiast, this project equips you with practical skills and clear examples to master statistical analysis in Python.
 
-Custom data wrangling example (airline fare data for 2000 and 2001)
+# Project Objectives
+Learn how to represent and manipulate data effectively using pandas DataFrames.
 
-Configuration files for reproducibility
+Understand and apply hypothesis testing methods including Student’s t-tests and paired tests.
 
-Git best practices (including .gitignore)
+Build and interpret linear regression models with multiple predictors and interaction terms using statsmodels.
 
- Repository Structure
-vbnet
-Copy
-Edit
+Perform Analysis of Variance (ANOVA) and post-hoc hypothesis tests to analyze group effects.
 
-Assignment4-Stats-Scripts/
+Create meaningful, insightful visualizations using Seaborn, including pairplots and regression plots.
 
-1. notebooks/
-2. stats_python.ipynb      <- Jupyter notebook with step-by-step code and comments
-3. .gitignore                  <- Excludes unnecessary files (e.g., checkpoints, pycache)
-4. environment.yml            <- Conda environment with required dependencies
-5. requirements.txt           <- Optional: alternative pip-based setup
-6. README.md                  <- You're here!
+Develop reproducible, clean Python code for statistical modeling and plotting.
 
-Setup Instructions
-Clone the repository:
+# Datasets Used
+Iris Dataset: Classic dataset for exploring flower species classification based on sepal and petal measurements.
 
-bash
-Copy
-Edit
-git clone https://github.com/Keehinde678/Assignment4-Stats-Scripts.git
-cd Assignment4-Stats-Scripts
-Create environment:
+Brain Size Dataset: Contains IQ scores, body measurements, and demographic data, ideal for studying cognitive and physical variable relationships.
 
-Using Conda:
+# Key Topics Covered
+1. Data Representation and Interaction
+Explore how to structure and interact with data, focusing on tabular formats.
 
-bash
-Copy
-Edit
-conda env create -f environment.yml
-conda activate stats_env
-Or using pip:
+2. Data as a Table & pandas DataFrame
+Learn why dataframes are powerful tools for organizing, filtering, and manipulating data in Python.
+
+3. Hypothesis Testing: Comparing Two Groups
+Understand basic statistical testing principles and compare groups with confidence.
+
+4. Student’s t-test and Paired Tests
+Apply fundamental tests for both independent and repeated measurements.
+
+5. Linear Models and Multiple Factors
+Model relationships using regression, including multiple explanatory variables and interaction effects.
+
+6. Statistical Formulas in Python
+Use intuitive formula syntax to specify complex statistical models easily.
+
+7. Analysis of Variance (ANOVA) & Post-hoc Testing
+Analyze differences across multiple groups and conduct follow-up comparisons.
+
+8. Advanced Visualization with Seaborn
+Utilize Seaborn’s powerful visualization capabilities to uncover patterns and insights:
+
+Pairplot: Visualize scatter matrices for variable relationships.
+
+lmplot: Create univariate regression plots with confidence intervals.
+
+9. Testing for Interactions
+Detect and interpret how variables jointly affect outcomes.
+
+10. Full Code and Exercises
+Access complete code for all visualizations and statistical tests, plus detailed solutions to practice exercises for self-assessment.
+
+Installation
+To run this project locally, you need Python and several packages installed. The recommended way is to use the provided requirements.txt:
 
 bash
 Copy
 Edit
 pip install -r requirements.txt
-Launch Jupyter Notebook:
+Required packages include:
 
-bash
-Copy
-Edit
-jupyter notebook
-Navigate to notebooks/stats_python.ipynb to explore the analysis.
-
- What You'll Learn
-In this notebook, I explored the following:
-
-1. Descriptive Statistics
-Mean, median, standard deviation
-
-Percentiles
-
-Covariance and correlation matrices
-
-2. Visualization
-Histograms
-
-Boxplots
-
-Scatter matrices
-
-Seaborn regression plots (lmplot)
-
-Heatmaps with correlation matrices
-
-3. Inferential Statistics
-Linear regression using statsmodels
-
-Interpreting model summary output
-
-Confidence intervals
-
- Custom Work – Airline Fare Dataset
-In addition to the tutorial, I included a section where I worked with airline fare data for the years 2000 and 2001. I performed the following:
-
-Flattened the hierarchical data structure using reset_index()
-
-Selected and renamed relevant columns for both years
-
-Created consistent column names (city1, city2, fare, nb_passengers)
-
-Added a year column to distinguish between datasets
-
-Concatenated the two yearly datasets into a single DataFrame
-
-This transformation demonstrates real-world data cleaning and merging skills.
-
-python
-Copy
-Edit
-# Combine and label flight data for two years
-data_flat = data.reset_index()
-
-# Process 2000 data
-data_2000 = data_flat[['city1', 'city2', 'pop1', 'pop2', 'dist', 'fare_2000', 'nb_passengers_2000']]
-data_2000.columns = ['city1', 'city2', 'pop1', 'pop2', 'dist', 'fare', 'nb_passengers']
-data_2000['year'] = 2000
-
-# Process 2001 data
-data_2001 = data_flat[['city1', 'city2', 'pop1', 'pop2', 'dist', 'fare_2001', 'nb_passengers_2001']]
-data_2001.columns = ['city1', 'city2', 'pop1', 'pop2', 'dist', 'fare', 'nb_passengers']
-data_2001['year'] = 2001
-
-# Combine both
-data_flat = pandas.concat([data_2000, data_2001])
- Files Included
-File	Description
-notebooks/stats_python.ipynb	The main notebook with code, comments, and insights
-.gitignore	Prevents unnecessary files from being tracked
-environment.yml	Defines the Conda environment for reproducibility
-requirements.txt	Lists required packages for pip users
-README.md	Assignment overview and instructions
-
- Packages Used
 numpy
-
-pandas
-
-matplotlib
-
-seaborn
-
-statsmodels
 
 scipy
 
-You can update the environment file with:
+matplotlib
+
+pandas
+
+statsmodels
+
+seaborn
+
+We recommend using the Anaconda distribution for a hassle-free installation.
+
+Usage
+Clone this repository:
 
 bash
 Copy
 Edit
-conda env export > environment.yml
-Or for pip:
+git clone https://github.com/yourusername/statistics-python-project.git
+cd statistics-python-project
+Place your datasets (iris.csv and brain_size.csv) into the data/ folder.
+
+Run the analysis scripts:
+
+For Iris dataset analysis:
 
 bash
 Copy
 Edit
-pip freeze > requirements.txt
- Notes
-Every section in the notebook is annotated with markdown explanations and detailed comments inside code cells.
+python analyze_iris.py
+For Brain Size dataset analysis:
 
-Errors and unexpected behaviors were addressed and resolved (e.g., indexing issues and plot rendering).
+bash
+Copy
+Edit
+python analyze_brain_size.py
+Explore output plots and regression summaries for insights.
 
-The tutorial and custom work together provide a comprehensive practice on data cleaning, statistical modeling, and data visualization in Python.
+Example Code Snippet: Linear Regression on Brain Size Dataset
+python
+Copy
+Edit
+import pandas as pd
+from statsmodels.formula.api import ols
 
- References
- Scipy Statistics Tutorial
+# Load data
+brain = pd.read_csv('data/brain_size.csv', sep=';', na_values='.')
 
- Pandas Documentation
+# Fit model with interaction between height and gender
+model = ols('FSIQ ~ Height * Gender', data=brain).fit()
 
- Seaborn Documentation
+# Print results
+print(model.summary())
+Contributing
+Contributions are highly welcome! Feel free to:
+
+Report bugs or suggest features via GitHub issues
+
+Submit pull requests to improve code, documentation, or add datasets
+
+License
+This project is open-source under the MIT License.
+
+Contact
+If you have questions, ideas, or want to collaborate, reach out:
+
+Name: Kehinde Soetan
+
+Email: soetan.6@osu.edu
+
+GitHub: Keehinde678
+
