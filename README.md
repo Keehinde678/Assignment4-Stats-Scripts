@@ -1,14 +1,15 @@
-Assignment4-Stats-Scripts
-Overview
+# Assignment4-Stats-Scripts
+
+## Overview
+
 Welcome to the Assignment4-Stats-Scripts repository! This project is designed to explore fundamental statistical concepts and data visualization techniques using Python. We work with datasets, perform hypothesis testing, regression analyses, and create insightful visualizations to understand complex relationships in data.
 
 The main focus is on developing reproducible, well-documented scripts and notebooks that enhance your data analysis skills while providing a strong foundation in applied statistics.
 
 Repository Contents
-notebooks/
-Contains Jupyter Notebooks that guide you step-by-step through the statistical analyses and visualizations.
+Notebooks: contains Jupyter Notebooks that guide you step-by-step through the statistical analyses and visualizations.
 
-stats_python.ipynb: Your main notebook with detailed code examples, comments, and markdown explanations.
+stats_python.ipynb: main notebook with detailed code examples, comments, and markdown explanations.
 
 environment.yml / requirements.txt
 These files specify the software dependencies and packages required to run the analyses in a reproducible environment.
@@ -19,37 +20,23 @@ Specifies files and folders (like temporary files, checkpoints) to be excluded f
 README.md
 This document that outlines the project, setup instructions, and usage.
 
-Getting Started
-Prerequisites
-Install Anaconda or Miniconda for easy environment management
-OR
+## Setup on Ascend Desktop
+Ascend Desktop supports Python and Jupyter notebooks but may not have Conda installed by default. Here are instructions to get your environment ready:
 
-Have Python 3.x installed with pip package manager.
+Using pip (recommended for Ascend Desktop)
+Create and activate a Python virtual environment (optional but recommended):
 
-Setup Environment
-Using conda (recommended for easier dependency management):
+python3 -m venv assignment4-env
+source assignment4-env/bin/activate   # On Windows: assignment4-env\Scripts\activate
+Install required packages with pip:
 
-bash
-Copy
-Edit
+pip install -r requirements.txt
+Using Conda (if available)
+If Conda is installed or can be installed on Ascend Desktop, use:
+
 conda env create -f environment.yml
 conda activate assignment4-env
-Using pip (if you prefer requirements.txt):
 
-bash
-Copy
-Edit
-python -m venv assignment4-env
-source assignment4-env/bin/activate  # On Windows: assignment4-env\Scripts\activate
-pip install -r requirements.txt
-Usage
-Open the Jupyter Notebook:
-
-bash
-Copy
-Edit
-jupyter notebook notebooks/stats_python.ipynb
-Follow the notebook cells to:
 
 Load datasets
 
@@ -77,11 +64,9 @@ Reproducibility: Environment files ensure consistent package versions across set
 Detailed Documentation: Code cells have comprehensive comments and markdown cells explain the rationale behind each step.
 
 Folder Structure
-bash
-Copy
-Edit
+
 Assignment4-Stats-Scripts/
-│
+
 ├── notebooks/
 │   └── stats_python.ipynb      # Main notebook with detailed examples
 │
@@ -89,13 +74,3 @@ Assignment4-Stats-Scripts/
 ├── requirements.txt           # Pip requirements file (alternative)
 ├── .gitignore                 # Git ignore rules
 └── README.md                  # This README file
-Contribution
-Contributions are welcome! Please feel free to:
-
-Suggest improvements or report issues
-
-Add new analyses or visualizations
-
-Improve documentation or code clarity
-
-Before contributing, ensure your environment matches the specified dependencies.
