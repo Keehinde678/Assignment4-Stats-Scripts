@@ -50,7 +50,7 @@ Understand interaction effects in regression models
 
 Save your progress and commit your changes regularly for version control.
 
-Key Features and Highlights
+## Key Features and Highlights
 Data Loading & Cleaning: Demonstrates how to load CSV files, handle missing values, and inspect data shapes and types.
 
 Statistical Testing: Includes examples of one-sample, independent, and paired t-tests using scipy.stats.
@@ -63,7 +63,7 @@ Reproducibility: Environment files ensure consistent package versions across set
 
 Detailed Documentation: Code cells have comprehensive comments and markdown cells explain the rationale behind each step.
 
-Folder Structure
+## Folder Structure
 
 Assignment4-Stats-Scripts/
 
